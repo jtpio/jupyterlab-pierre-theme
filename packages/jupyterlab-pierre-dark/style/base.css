@@ -1,0 +1,18 @@
+/* Set the default typography for monospace elements */
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--jp-code-font-family);
+  font-size: var(--jp-code-font-size);
+  line-height: var(--jp-code-line-height);
+}
+
+/* Override FAST design system variables for tree items so the file browser
+ * rows follow the theme's layout colors. */
+jp-tree-item.jp-TreeItem {
+  --neutral-fill-stealth-rest: var(--jp-layout-color1) !important;
+  --neutral-fill-stealth-hover: var(--jp-layout-color2) !important;
+  --neutral-fill-stealth-active: var(--jp-layout-color1) !important;
+}

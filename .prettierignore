@@ -1,0 +1,9 @@
+node_modules
+.jupyter
+**/lib
+**/labextension
+**/jupyterlab_pierre_*/labextension
+**/*.tsbuildinfo
+.venv
+venv
+pnpm-lock.yaml
