@@ -70,5 +70,17 @@ npm = ["pnpm"]
 source_dir = "src"
 build_dir = "jupyterlab_pierre_light/labextension"
 
+[tool.jupyter-releaser.options]
+version_cmd = "hatch version"
+
+[tool.jupyter-releaser.hooks]
+before-build-npm = [
+    "python -m pip install 'jupyter-builder>=1.0.0b1,<2.0.0a0'",
+    "npm install -g pnpm@10.28.0",
+    "pnpm install",
+    "pnpm build:prod",
+]
+before-build-python = ["pnpm clean:all"]
+
 [tool.check-wheel-contents]
 ignore = ["W002"]

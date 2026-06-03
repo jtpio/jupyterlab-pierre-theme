@@ -156,5 +156,33 @@
             "color-function-notation": null,
             "custom-property-pattern": null
         }
+    },
+    "jupyter-releaser": {
+        "options": {
+            "version-cmd": "hatch version",
+            "python-packages": [
+                "packages/jupyterlab-pierre-dark:jupyterlab_pierre_dark",
+                "packages/jupyterlab-pierre-light:jupyterlab_pierre_light"
+            ],
+            "pydist-extra-check-cmds": [
+                "pipx run 'validate-pyproject[all]' packages/*/pyproject.toml",
+                "pipx run check-wheel-contents --config packages/jupyterlab-pierre-dark/pyproject.toml {dist_dir}/jupyterlab_pierre_dark*.whl",
+                "pipx run check-wheel-contents --config packages/jupyterlab-pierre-light/pyproject.toml {dist_dir}/jupyterlab_pierre_light*.whl"
+            ]
+        },
+        "hooks": {
+            "after-bump-version": [
+                "python scripts/sync_version.py"
+            ],
+            "before-build-npm": [
+                "python -m pip install 'jupyter-builder>=1.0.0b1,<2.0.0a0'",
+                "npm install -g pnpm@10.28.0",
+                "pnpm install",
+                "pnpm build:prod"
+            ],
+            "before-build-python": [
+                "pnpm clean:all"
+            ]
+        }
     }
 }
