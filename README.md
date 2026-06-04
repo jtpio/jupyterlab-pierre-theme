@@ -3,6 +3,12 @@
 JupyterLab light and dark themes that match the [Pierre](https://pierre.co)
 palette, the same colors used by the `@pierre/diffs` viewer.
 
+![The Pierre Dark theme in JupyterLab: a notebook, a console with ipywidgets, and a Python file open side by side](./screenshot.png)
+
+It was made to fit the work on
+[xtralab](https://github.com/jtpio/xtralab), so a JupyterLab workbench and the
+git diffs xtralab renders through `@pierre/diffs` read as a single product.
+
 This repository ships two prebuilt JupyterLab themes:
 
 - `jupyterlab-pierre-light`
@@ -10,9 +16,7 @@ This repository ships two prebuilt JupyterLab themes:
 
 They recolor the whole JupyterLab UI (layout, accents, state colors) and the
 CodeMirror editor syntax highlighting so the editor reads as the same product
-as a Pierre diff. It was built to pair with
-[xtralab](https://github.com/jtpio/xtralab), which renders git diffs through
-`@pierre/diffs`, but the themes work in any JupyterLab 4 install.
+as a Pierre diff. The themes work in any JupyterLab 4 install.
 
 ## Install
 
