@@ -41,9 +41,6 @@ fields = ["description", "authors", "urls", "keywords"]
 artifacts = ["jupyterlab_pierre_light/labextension"]
 exclude = [".github", "binder"]
 
-[tool.hatch.build.targets.wheel]
-artifacts = ["jupyterlab_pierre_light/labextension"]
-
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyterlab_pierre_light/labextension" = "share/jupyter/labextensions/jupyterlab-pierre-light"
 "install.json" = "share/jupyter/labextensions/jupyterlab-pierre-light/install.json"
