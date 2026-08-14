@@ -29,7 +29,7 @@ Then pick "Pierre Light" or "Pierre Dark" from Settings, Theme.
 ## Color source
 
 The palettes are generated from [`@pierre/theme`](https://www.npmjs.com/package/@pierre/theme),
-Pierre's canonical theme package (MIT licensed). `scripts/generate-theme.mjs`
+Pierre's canonical theme package (Apache-2.0 licensed). `scripts/generate-theme.mjs`
 reads `@pierre/theme/themes/pierre-{light,dark}.json` and writes each package's
 `style/variables.css`, so the JupyterLab themes track upstream Pierre instead of
 drifting from hand-copied hex values. Regenerate with:
@@ -70,5 +70,5 @@ Then reload JupyterLab and select the theme.
 
 ## License
 
-BSD-3-Clause. Color values are derived from `@pierre/theme`, which is MIT
-licensed.
+BSD-3-Clause. Color values are derived from `@pierre/theme`, which is
+Apache-2.0 licensed.
