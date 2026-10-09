@@ -53,8 +53,8 @@
         "@lezer/highlight": "^1.0.0"
     },
     "devDependencies": {
-        "@jupyter/builder": "^1.2.2",
-        "@jupyterlab/core-meta": "^4.6.3",
+        "@jupyter/builder": "^1.2.3",
+        "@jupyterlab/core-meta": "^4.6.4",
         "@module-federation/runtime-tools": "^2.0.0",
         "npm-run-all2": "^9.0.3",
         "rimraf": "^6.1.3",

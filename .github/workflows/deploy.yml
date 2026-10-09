@@ -31,12 +31,12 @@ jobs:
           node-version: '20'
 
       - name: Install pnpm
-        run: npm install -g pnpm@10.28.0
+        run: npm install -g pnpm@10.34.6
 
       - name: Build JS packages
         run: |
           pnpm install
-          uv run --with 'jupyter-builder>=1.2.2,<2' pnpm build:prod
+          uv run --with 'jupyter-builder>=1.2.3,<2' pnpm build:prod
 
       - name: Install the project
         run: uv sync --locked --all-extras --dev
